@@ -12,6 +12,14 @@ import {
   IconButton,
 } from "@mui/material";
 import {
+  Security as SecurityIcon,
+  CloudSync as CloudSyncIcon,
+  VerifiedUser as VerifiedUserIcon,
+  LinearScale as LinearScaleIcon,
+  PlayArrow as PlayArrowIcon,
+  Pause as PauseIcon,
+} from "@mui/icons-material";
+import {
   Box,
   Grid,
   Paper,
@@ -174,18 +182,21 @@ const HomePage = () => {
           size="large"
           component={Link}
           to="/authenticate"
+          startIcon={<SecurityIcon />}
           sx={{
             mt: 4,
-            px: 4,
+            px: 5,
             py: 2,
             backgroundColor: "white",
             color: "#2962FF",
             fontWeight: "bold",
             borderRadius: "25px",
+            textTransform: "none",
             ":hover": {
               backgroundColor: "#FFA500",
             },
             fontSize: "1.25rem",
+            textTransform: "none",
           }}
         >
           Get Started
@@ -567,108 +578,6 @@ const HomePage = () => {
                   sx={{ color: "#555", fontSize: "14px" }}
                 >
                   {timeline.description}
-                </Typography>
-              </Paper>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      <Container
-        sx={{
-          my: 8,
-          backgroundColor: "#f9f9f9",
-          py: 6,
-          borderRadius: "16px",
-          boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-          transition: "all 0.3s ease",
-          "&:hover": {
-            boxShadow: "0 8px 40px rgba(0, 0, 0, 0.2)",
-          },
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{
-            textAlign: "center",
-            fontWeight: "bold",
-            mb: 4,
-            color: "#004080",
-            textTransform: "uppercase",
-            letterSpacing: "2px",
-            fontSize: { xs: "24px", md: "32px" },
-          }}
-        >
-          Frequently Asked Questions
-        </Typography>
-        <Grid container spacing={4}>
-          {[
-            {
-              question: "How can SEAM be personalized for my organization?",
-              answer:
-                "SEAM offers customizable modules and features tailored to meet the specific needs of your organization, ensuring a solution that perfectly fits your accessibility requirements.",
-            },
-            {
-              question: "What types of devices are compatible with SEAM?",
-              answer:
-                "SEAM is designed to be highly flexible and can be integrated with a wide range of devices, including mobile phones, smartwatches, IoT-enabled devices, and accessible hardware solutions.",
-            },
-            {
-              question:
-                "How does SEAM improve mobility for individuals with disabilities?",
-              answer:
-                "SEAM utilizes cutting-edge technologies like GPS, AI, and real-time analytics to create intuitive mobility solutions that help users navigate spaces safely and independently, enhancing both access and mobility.",
-            },
-            {
-              question:
-                "Can SEAM be used for both physical and digital accessibility?",
-              answer:
-                "Absolutely! SEAM covers both physical accessibility, through tools like smart mobility aids, and digital accessibility, offering adaptive technologies to improve digital experiences for individuals with disabilities.",
-            },
-            {
-              question: "Is there support for multiple languages in SEAM?",
-              answer:
-                "Yes, SEAM supports multilingual interfaces to cater to diverse user groups across regions, making it easier for individuals from different linguistic backgrounds to access its features.",
-            },
-            {
-              question:
-                "How do I track the usage and effectiveness of SEAM solutions?",
-              answer:
-                "SEAM includes robust analytics tools that allow administrators and organizations to track usage, analyze data trends, and assess the effectiveness of the solutions in improving accessibility and mobility.",
-            },
-          ].map((faq, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 4,
-                  borderRadius: "12px",
-                  textAlign: "center",
-                  backgroundColor: "#eef6fb",
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.05)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                    boxShadow: "0 8px 40px rgba(0, 0, 0, 0.1)",
-                  },
-                }}
-              >
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: "#003366",
-                    fontWeight: "bold",
-                    mb: 2,
-                    fontSize: { xs: "16px", md: "18px" },
-                  }}
-                >
-                  {faq.question}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{ color: "#555", fontSize: "14px" }}
-                >
-                  {faq.answer}
                 </Typography>
               </Paper>
             </Grid>

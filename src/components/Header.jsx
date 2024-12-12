@@ -7,6 +7,14 @@ import {
   Button,
   IconButton,
 } from "@mui/material";
+import {
+  Security as SecurityIcon,
+  CloudSync as CloudSyncIcon,
+  VerifiedUser as VerifiedUserIcon,
+  LinearScale as LinearScaleIcon,
+  PlayArrow as PlayArrowIcon,
+  Pause as PauseIcon,
+} from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 // linear-gradient(to right, #001F3F, #003F7F)
@@ -50,28 +58,60 @@ const Header = () => {
           <Button
             component={Link}
             to="/"
-            sx={{ color: "#00008B", fontWeight: "bold" }}
+            sx={{
+              color: "#00008B",
+              fontWeight: "bold",
+              textTransform: "none",
+              fontSize: "1rem",
+            }}
           >
             Home
           </Button>
           <Button
             component={Link}
+            to="/"
+            sx={{
+              color: "#00008B",
+              fontWeight: "bold",
+              textTransform: "none",
+              fontSize: "1rem",
+            }}
+          >
+            Register
+          </Button>
+          <Button
+            component={Link}
             to="/authenticate"
-            sx={{ color: "#00008B", fontWeight: "bold" }}
+            sx={{
+              color: "#00008B",
+              fontWeight: "bold",
+              textTransform: "none",
+              fontSize: "1rem",
+            }}
           >
             Authenticate
           </Button>
           <Button
             component={Link}
             to="/"
-            sx={{ color: "#00008B", fontWeight: "bold" }}
+            sx={{
+              color: "#00008B",
+              fontWeight: "bold",
+              textTransform: "none",
+              fontSize: "1rem",
+            }}
           >
-            Features
+            Analytics
           </Button>
           <Button
             component={Link}
             to="/"
-            sx={{ color: "#00008B", fontWeight: "bold" }}
+            sx={{
+              color: "#00008B",
+              fontWeight: "bold",
+              textTransform: "none",
+              fontSize: "1rem",
+            }}
           >
             Contact
           </Button>
